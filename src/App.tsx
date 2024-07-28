@@ -11,6 +11,8 @@ function App() {
 
   function handleCreateNewTodo() {}
 
+  const isTodoListEmpty = todos.length === 0
+
   useEffect(() => {
     // get todo list backend
   }, [])
@@ -44,6 +46,8 @@ function App() {
             <li key={todo}>{todo} </li>
           ))}
         </ul>
+
+        {isTodoListEmpty && <p>Nenhum todo cadastrado.</p>}
       </main>
 
       {/* footer */}
